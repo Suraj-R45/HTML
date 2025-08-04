@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Light Theme */
+body.light {
+  background-color: burlywood;
+  color: red;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: blueviolet;
+  color: yellow;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px auto;
+  grid-template-rows: 60px auto 40px;
+  height: 200vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: darkcyan;
+  color: rgb(62, 7, 243);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+body.dark .header {
+  background-color: rgb(6, 248, 111);
+  color: rgb(240, 6, 181);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgb(139, 138, 127);
+  padding: 20px;
+}
+
+body.dark .sidebar {
+  background-color: rgb(226, 73, 73);
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+  background-color: rgb(243, 243, 243);
+}
+
+body.dark .main {
+  background-color: #222; /* Named alternative not ideal here */
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(17, 16, 16);
+  color: rgb(180, 248, 143);
+  text-align: center;
+  padding: 10px;
+}
+
+body.dark .footer {
+  background-color: rgb(53, 47, 47);
+  color: rgb(250, 248, 248);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+}
